@@ -75,7 +75,7 @@ def _crear_agentes(entorno, cantidad, rng):
 
 def _algoritmo(nombre, semilla):
     if nombre == "Genético":
-        return Genetico(
+        return AlgoritmoGenetico(
             poblacion=12,
             generaciones=12,
             max_pasos=120,
@@ -190,8 +190,9 @@ if __name__ == "__main__":
     parser.add_argument("--agentes", type=int, required=True)
     parser.add_argument("--fuegos", type=int, required=True)
     argumentos = parser.parse_args()
-    print(f"Resultados guardados en {ejecutar_benchmark(
+    resultado = ejecutar_benchmark(
         argumentos.iteraciones,
         argumentos.agentes,
         argumentos.fuegos,
-    )}")
+    )
+    print(f"Resultados guardados en {resultado}")
