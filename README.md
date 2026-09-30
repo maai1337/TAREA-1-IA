@@ -24,8 +24,8 @@ para la entrega fue la siguiente:
 
 ```powershell
 python -m src.benchmark `
-    --iteraciones 200 `
-    --agentes 80 `
+    --iteraciones 80 `
+    --agentes 200 `
     --fuegos 3 `
 ```
 
